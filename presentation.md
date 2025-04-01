@@ -69,14 +69,56 @@ def main():
 
 ## Key Python Concepts Used
 
-*   **Functions (`def`)**: Reusable blocks of code.
-*   **Input (`input()`)**: Gets input from the user.
-*   **Type Conversion (`int()`)**: Converts text input to numbers.
-*   **Loops (`while True`)**: Repeats the game turns.
-*   **Conditionals (`if`/`elif`/`else`)**: Makes decisions (who wins?).
-*   **Loop Control (`break`, `continue`)**: Ends the game (`break`) or skips invalid input (`continue`).
-*   **Error Handling (`try`/`except`)**: Catches errors if input isn't a number.
-*   **Printing (`print()`)**: Shows messages and results to the players.
+*   **Functions (`def`)**: Define reusable blocks of code. Makes the program organized.
+    ```python
+    def stone_function(opponent_choice):
+        # ... code to decide winner ...
+    ```
+*   **Input (`input()`)**: Gets text input from the user (always returns text).
+    ```python
+    input("Player 1, Enter your choice: ") 
+    ```
+*   **Type Conversion (`int()`)**: Converts text to an integer (whole number).
+    ```python
+    player_1 = int(input("...")) # Convert text input to number
+    ```
+*   **Loops (`while True`)**: Creates a loop that runs forever until explicitly stopped (`break`). Used here to keep playing turns.
+    ```python
+    while True:
+        # ... game turn logic ...
+    ```
+*   **Conditionals (`if`/`elif`/`else`)**: Make decisions based on conditions. Used to check choices and determine the winner.
+    ```python
+    if player_1 == 1: # If Player 1 chose Paper
+        result = paper_function(player_2)
+    elif player_1 == 2: # Otherwise, if Player 1 chose Scissors
+        result = scissors_function(player_2)
+    # ... etc ...
+    ```
+*   **Loop Control (`break`, `continue`)**: 
+    *   `break`: Exits the current loop immediately. Used to end the game when a player enters 0.
+        ```python
+        if player_1 == 0:
+            print("End")
+            break # Stop the while loop
+        ```
+    *   `continue`: Skips the rest of the current loop iteration and goes back to the start of the loop. Used for invalid input.
+        ```python
+        if player_1 not in [1, 2, 3]:
+            print("Invalid input! ...")
+            continue # Skip to next loop iteration
+        ```
+*   **Error Handling (`try`/`except`)**: Tries to run code that might fail (like converting text to a number). If it fails (e.g., user types "abc"), it runs the `except` block instead of crashing.
+    ```python
+    try:
+        player_1 = int(input("...")) 
+    except ValueError: # If int() fails
+        print("Invalid input! Please enter a number.")
+    ```
+*   **Printing (`print()`)**: Displays text output to the console/terminal.
+    ```python
+    print("Player 1 wins!")
+    ```
 
 ---
 
