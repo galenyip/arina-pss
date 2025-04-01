@@ -123,13 +123,6 @@ if player_1 not in [1, 2, 3]:
     # Handle invalid input
 ```
 
-#### 8. Main Function Check
-The `if __name__ == "__main__":` line ensures the game only runs when the script is executed directly:
-```python
-if __name__ == "__main__":
-    main()
-```
-
 ### How to Modify the Game
 
 To modify the game, you could:

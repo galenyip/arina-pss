@@ -106,5 +106,5 @@ def main():
             print("Invalid input! Please enter a number.")
 
 
-if __name__ == "__main__":
-    main() 
+# Call main function directly
+main() 
