@@ -68,8 +68,8 @@ def check_winner(player_1, player_2):
         return "Invalid player 1 choice"
 
 
-def main_game():
-    """Main function to run the game."""
+def main():
+    """Main function to run the rock-paper-scissors game."""
     print("Make a choice below:")
     print("1 represent paper.")
     print("2 represent scissor")
@@ -104,11 +104,6 @@ def main_game():
             
         except ValueError:
             print("Invalid input! Please enter a number.")
-
-
-def main():
-    """Entry point of the program."""
-    main_game()
 
 
 if __name__ == "__main__":
