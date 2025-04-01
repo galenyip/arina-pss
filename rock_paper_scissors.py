@@ -1,13 +1,72 @@
-def check_winner(player_1, player_2):
-    """Check who wins based on the choices."""
-    if player_1 == player_2:
+def paper_function(opponent_choice):
+    """Handle paper choice logic.
+    
+    Args:
+        opponent_choice: The choice made by the opponent (1=paper, 2=scissors, 3=stone)
+    
+    Returns:
+        str: Result of the match
+    """
+    if opponent_choice == 1:  # Paper vs Paper
         return "It is a tie!"
-    elif (player_1 == 1 and player_2 == 3) or \
-         (player_1 == 2 and player_2 == 1) or \
-         (player_1 == 3 and player_2 == 2):
+    elif opponent_choice == 2:  # Paper vs Scissors
+        return "Player 2 wins!"
+    elif opponent_choice == 3:  # Paper vs Stone
         return "Player 1 wins!"
     else:
+        return "Invalid opponent choice"
+
+
+def scissors_function(opponent_choice):
+    """Handle scissors choice logic.
+    
+    Args:
+        opponent_choice: The choice made by the opponent (1=paper, 2=scissors, 3=stone)
+    
+    Returns:
+        str: Result of the match
+    """
+    if opponent_choice == 1:  # Scissors vs Paper
+        return "Player 1 wins!"
+    elif opponent_choice == 2:  # Scissors vs Scissors
+        return "It is a tie!"
+    elif opponent_choice == 3:  # Scissors vs Stone
         return "Player 2 wins!"
+    else:
+        return "Invalid opponent choice"
+
+
+def stone_function(opponent_choice):
+    """Handle stone choice logic.
+    
+    Args:
+        opponent_choice: The choice made by the opponent (1=paper, 2=scissors, 3=stone)
+    
+    Returns:
+        str: Result of the match
+    """
+    if opponent_choice == 1:  # Stone vs Paper
+        return "Player 2 wins!"
+    elif opponent_choice == 2:  # Stone vs Scissors
+        return "Player 1 wins!"
+    elif opponent_choice == 3:  # Stone vs Stone
+        return "It is a tie!"
+    else:
+        return "Invalid opponent choice"
+
+
+def check_winner(player_1, player_2):
+    """Check who wins based on the choices."""
+    # Use the appropriate function based on player 1's choice
+    if player_1 == 1:  # Paper
+        return paper_function(player_2)
+    elif player_1 == 2:  # Scissors
+        return scissors_function(player_2)
+    elif player_1 == 3:  # Stone
+        return stone_function(player_2)
+    else:
+        return "Invalid player 1 choice"
+
 
 def main_game():
     """Main function to run the game."""
@@ -46,5 +105,11 @@ def main_game():
         except ValueError:
             print("Invalid input! Please enter a number.")
 
+
+def main():
+    """Entry point of the program."""
+    main_game()
+
+
 if __name__ == "__main__":
-    main_game() 
+    main() 
