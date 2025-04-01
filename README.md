@@ -58,27 +58,31 @@ If you're new to Python, here's a breakdown of how this program works:
 
 The program is organized into functions - reusable blocks of code that perform specific tasks:
 
-1. `check_winner()` - Determines who wins based on player choices
-2. `main_game()` - Handles the game flow, user input, and output
+1. `paper_function()` - Handles logic when Player 1 chooses paper
+2. `scissors_function()` - Handles logic when Player 1 chooses scissors 
+3. `stone_function()` - Handles logic when Player 1 chooses stone
+4. `check_winner()` - Determines who wins by calling the appropriate function based on Player 1's choice
+5. `main_game()` - Handles the game flow, user input, and output
+6. `main()` - Entry point of the program
 
 ### Key Python Concepts Used
 
 #### 1. Functions
 Functions are defined using the `def` keyword followed by the function name and parameters:
 ```python
-def check_winner(player_1, player_2):
+def paper_function(opponent_choice):
     # Function code here
 ```
 
 #### 2. Conditional Statements
 The program uses `if`, `elif` (else if), and `else` to make decisions:
 ```python
-if player_1 == player_2:
+if opponent_choice == 1:  # Paper vs Paper
     return "It is a tie!"
-elif (conditions):
-    return "Player 1 wins!"
-else:
+elif opponent_choice == 2:  # Paper vs Scissors
     return "Player 2 wins!"
+elif opponent_choice == 3:  # Paper vs Stone
+    return "Player 1 wins!"
 ```
 
 #### 3. Loops
@@ -116,7 +120,7 @@ if player_1 not in [1, 2, 3]:
 The `if __name__ == "__main__":` line ensures the game only runs when the script is executed directly:
 ```python
 if __name__ == "__main__":
-    main_game()
+    main()
 ```
 
 ### How to Modify the Game
