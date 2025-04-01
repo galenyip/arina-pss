@@ -16,7 +16,7 @@ python rock_paper_scissors.py
 
 ## Flowchart
 
-A Mermaid-based flowchart visualizes the game logic in the file `mermaid_flowchart.md`.
+A Mermaid-based flowchart visualizes the game logic in the file [`mermaid_flowchart.md`](./mermaid_flowchart.md).
 
 You can view this flowchart:
 - On GitHub (it renders automatically)
