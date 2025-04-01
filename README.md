@@ -94,13 +94,34 @@ while True:
         break  # Exits the loop
 ```
 
-#### 4. Input and Type Conversion
+#### 4. Loop Control Statements
+The program uses two important loop control statements:
+
+##### break
+The `break` statement immediately terminates the loop and moves to the code after the loop:
+```python
+if player_1 == 0:
+    print("End")
+    break  # Exits the loop completely
+```
+In our game, `break` is used to end the game when a player enters 0.
+
+##### continue
+The `continue` statement skips the rest of the current iteration and jumps to the next iteration of the loop:
+```python
+if player_1 not in [1, 2, 3]:
+    print("Invalid input! Please enter 1, 2, 3, or 0 to end.")
+    continue  # Skips the rest of the loop and starts again from the top
+```
+In our game, `continue` is used when a player enters an invalid choice, allowing them to try again without proceeding to the next player's turn.
+
+#### 5. Input and Type Conversion
 The `input()` function gets text from the user, and `int()` converts it to a number:
 ```python
 player_1 = int(input("Player 1, Enter your choice: "))
 ```
 
-#### 5. Error Handling
+#### 6. Error Handling
 `try`/`except` blocks catch errors if the user enters something that's not a number:
 ```python
 try:
@@ -109,14 +130,14 @@ except ValueError:
     print("Invalid input! Please enter a number.")
 ```
 
-#### 6. Lists and Membership Testing
+#### 7. Lists and Membership Testing
 The code checks if a value is in a list using the `in` operator:
 ```python
 if player_1 not in [1, 2, 3]:
     # Handle invalid input
 ```
 
-#### 7. Main Function Check
+#### 8. Main Function Check
 The `if __name__ == "__main__":` line ensures the game only runs when the script is executed directly:
 ```python
 if __name__ == "__main__":
