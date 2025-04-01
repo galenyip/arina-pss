@@ -1,12 +1,5 @@
 def paper_function(opponent_choice):
-    """Handle paper choice logic.
-    
-    Args:
-        opponent_choice: The choice made by the opponent (1=paper, 2=scissors, 3=stone)
-    
-    Returns:
-        str: Result of the match
-    """
+    """Determine the result when Player 1 chooses Paper"""
     if opponent_choice == 1:  # Paper vs Paper
         return "It is a tie!"
     elif opponent_choice == 2:  # Paper vs Scissors
@@ -18,14 +11,7 @@ def paper_function(opponent_choice):
 
 
 def scissors_function(opponent_choice):
-    """Handle scissors choice logic.
-    
-    Args:
-        opponent_choice: The choice made by the opponent (1=paper, 2=scissors, 3=stone)
-    
-    Returns:
-        str: Result of the match
-    """
+    """Determine the result when Player 1 chooses Scissors"""
     if opponent_choice == 1:  # Scissors vs Paper
         return "Player 1 wins!"
     elif opponent_choice == 2:  # Scissors vs Scissors
@@ -37,14 +23,7 @@ def scissors_function(opponent_choice):
 
 
 def stone_function(opponent_choice):
-    """Handle stone choice logic.
-    
-    Args:
-        opponent_choice: The choice made by the opponent (1=paper, 2=scissors, 3=stone)
-    
-    Returns:
-        str: Result of the match
-    """
+    """Determine the result when Player 1 chooses Stone"""
     if opponent_choice == 1:  # Stone vs Paper
         return "Player 2 wins!"
     elif opponent_choice == 2:  # Stone vs Scissors
