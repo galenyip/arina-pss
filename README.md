@@ -1,17 +1,10 @@
 # Rock Paper Scissors Game
 
-A simple Python implementation of the Rock Paper Scissors game with flowchart generators.
+A simple Python implementation of the Rock Paper Scissors game with a flowchart.
 
 ## Requirements
 
-Before running the program, make sure you have the required dependencies:
-
-```
-pip install -r requirements.txt
-```
-
-Note: You also need to have Graphviz installed on your system for the graphviz flowchart generation. 
-You can download it from: https://graphviz.org/download/
+No external dependencies are required to run the game.
 
 ## Running the Game
 
@@ -21,26 +14,20 @@ To play the rock-paper-scissors game:
 python rock_paper_scissors.py
 ```
 
-## Generating the Flowchart
+## Flowchart
 
-### Using Graphviz
-
-To generate the flowchart of the program using Graphviz:
-
-```
-python create_flowchart.py
-```
-
-This will create a PNG file named `rock_paper_scissors_flowchart.png` in the current directory.
-
-### Using Mermaid
-
-A Mermaid-based flowchart is available in the file `rock_paper_scissors_flowchart.md`.
+A Mermaid-based flowchart visualizes the game logic in the file `mermaid_flowchart.md`.
 
 You can view this flowchart:
-- On GitHub (if you push your code to GitHub, it will render automatically)
+- On GitHub (it renders automatically)
 - Using any Markdown viewer that supports Mermaid diagrams
 - Using the Mermaid Live Editor: https://mermaid.live (paste the content between the mermaid tags)
+
+You can also generate the flowchart using:
+
+```
+python create_mermaid_flowchart.py
+```
 
 ## Game Rules
 
