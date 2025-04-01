@@ -55,19 +55,6 @@ def stone_function(opponent_choice):
         return "Invalid opponent choice"
 
 
-def check_winner(player_1, player_2):
-    """Check who wins based on the choices."""
-    # Use the appropriate function based on player 1's choice
-    if player_1 == 1:  # Paper
-        return paper_function(player_2)
-    elif player_1 == 2:  # Scissors
-        return scissors_function(player_2)
-    elif player_1 == 3:  # Stone
-        return stone_function(player_2)
-    else:
-        return "Invalid player 1 choice"
-
-
 def main():
     """Main function to run the rock-paper-scissors game."""
     print("Make a choice below:")
@@ -98,8 +85,18 @@ def main():
                 print("Invalid input! Please enter 1, 2, 3, or 0 to end.")
                 continue
             
+            # Determine winner directly in main function
+            result = None
+            if player_1 == 1:  # Paper
+                result = paper_function(player_2)
+            elif player_1 == 2:  # Scissors
+                result = scissors_function(player_2)
+            elif player_1 == 3:  # Stone
+                result = stone_function(player_2)
+            else:
+                result = "Invalid player 1 choice"
+                
             # Display result
-            result = check_winner(player_1, player_2)
             print(result)
             
         except ValueError:

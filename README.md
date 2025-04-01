@@ -48,8 +48,7 @@ The program is organized into functions - reusable blocks of code that perform s
 1. `paper_function()` - Handles logic when Player 1 chooses paper
 2. `scissors_function()` - Handles logic when Player 1 chooses scissors 
 3. `stone_function()` - Handles logic when Player 1 chooses stone
-4. `check_winner()` - Determines who wins by calling the appropriate function based on Player 1's choice
-5. `main()` - Handles the game flow, user input, and output; serves as the entry point of the program
+4. `main()` - Handles the game flow, user input, and output; determines the winner by calling the appropriate function based on player choices
 
 ### Key Python Concepts Used
 

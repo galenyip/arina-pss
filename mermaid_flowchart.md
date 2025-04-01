@@ -14,9 +14,8 @@ flowchart TD
     CheckZeroP2 -->|Yes| End
     CheckZeroP2 -->|No| ValidateP2{Is choice valid?}
     ValidateP2 -->|No| InputP2
-    ValidateP2 -->|Yes| CheckWinner[Check Winner Function]
+    ValidateP2 -->|Yes| Choice{Player 1's Choice}
     
-    CheckWinner --> Choice{Player 1's Choice}
     Choice -->|Paper| PaperFunc[Paper Function]
     Choice -->|Scissors| ScissorsFunc[Scissors Function]
     Choice -->|Stone| StoneFunc[Stone Function]
