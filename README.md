@@ -23,12 +23,6 @@ You can view this flowchart:
 - Using any Markdown viewer that supports Mermaid diagrams
 - Using the Mermaid Live Editor: https://mermaid.live (paste the content between the mermaid tags)
 
-You can also generate the flowchart using:
-
-```
-python create_mermaid_flowchart.py
-```
-
 ## Game Rules
 
 1. Paper (1) wins against Stone (3)
